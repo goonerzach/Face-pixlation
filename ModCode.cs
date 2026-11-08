@@ -1,3 +1,5 @@
+using SLZ.Rig;
+using SLZ.Marrow.Warehouse;
 // FacePixelator.cs
 // BONELAB (Quest / LemonLoader + PC / MelonLoader) - BoneLib 3.x
 //
