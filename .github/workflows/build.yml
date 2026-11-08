@@ -3,21 +3,26 @@ name: Build Bonelab Mod
 on:
   push:
     branches: [ main, master ]
-  workflow_dispatch: # Allows you to manually trigger it from your phone
+  workflow_dispatch: 
 
 jobs:
   build:
-    runs-on: windows-latest # Windows runners come pre-equipped for .NET Framework 4.7.2
+    runs-on: windows-latest 
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore NuGet Packages
+      run: dotnet restore FacePixelator.csproj
 
     - name: Compile Mod DLL
-      run: msbuild FacePixelator.csproj /p:Configuration=Release
+      run: dotnet build FacePixelator.csproj -c Release
 
     - name: Upload Finished Mod
       uses: actions/upload-artifact@v4
