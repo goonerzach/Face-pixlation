@@ -23,4 +23,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: FacePixelator-Mod
-        path: bin/Release/net472/FacePixelator.dll
+     path: bin/Release/FacePixelator.dll
+     
