@@ -9,16 +9,16 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>Assembly-CSharp.dll</HintPath>
+      <HintPath>./Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>UnityEngine.dll</HintPath>
+      <HintPath>./UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>./UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="BoneLib">
-      <HintPath>BoneLib.dll</HintPath>
+      <HintPath>./BoneLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
