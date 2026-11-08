@@ -8,14 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>lib/UnityEngine.dll</HintPath>
+      <HintPath>UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>lib/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="BoneLib">
-      <HintPath>lib/BoneLib.dll</HintPath>
+      <HintPath>BoneLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
