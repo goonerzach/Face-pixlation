@@ -13,16 +13,11 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-
-    - name: Restore NuGet Packages
-      run: dotnet restore FacePixelator.csproj
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
 
     - name: Compile Mod DLL
-      run: dotnet build FacePixelator.csproj -c Release
+      run: msbuild FacePixelator.csproj /p:Configuration=Release
 
     - name: Upload Finished Mod
       uses: actions/upload-artifact@v4
